@@ -31,7 +31,6 @@ function visitPage(url,callback) {
   
   request(url, function(error, response, body) {
      
-     console.log("Status code: " + response.statusCode);
      // Check for error status code. 200 is for success state 
      if(response.statusCode !== 200) {
        callback();	
@@ -51,7 +50,8 @@ function collectInternalLinks($) {
   //this is to avoid usage of linkedin, google, facebook etc. As they don't have '.com' attached to the hostname.
   var parsedLinks = $("a[href*='"+ parsedURL.hostname +"']");
   
-  parsedLinks.each(function() {
+  parsedLinks.each(function() {	
+  	  domainLinks.push($(this).attr('style'));
       domainLinks.push($(this).attr('href'));
   });
   console.log("Found " + domainLinks.length + " domainLinks ");
