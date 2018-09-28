@@ -5,7 +5,11 @@ if which node > /dev/null
     else
         # add deb.nodesource repo commands 
         # install node
-        brew install node
+        brew search node
+        #brew unlink node
+        brew install node@8
+        #brew link node@8
+        brew unlink node@8 && brew link --force node@8
     fi
 
 
