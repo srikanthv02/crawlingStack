@@ -16,7 +16,7 @@ Building a simple web crawler usig NodeJS
 
 ### Steps to Build - Manual ###
 - Install node and npm on MAC using brew install node. (In case HomeBrew is working)
-- In case of Ubuntu machines please install node and npm via 
+- In case of Ubuntu machines, install node and npm via 
   - sudo apt-get update
   - sudo apt-get install nodejs
   - sudo apt-get install npm
