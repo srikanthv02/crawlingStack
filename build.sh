@@ -1,5 +1,13 @@
 #installing node and npm on a mac machine. pre-requisite is homebrew
-brew install node
+if which node > /dev/null
+    then
+        echo "node is installed, skipping..."
+    else
+        # add deb.nodesource repo commands 
+        # install node
+        brew install node
+    fi
+
 
 # cloning the web crawler repository.
 git clone https://github.com/srikanthv02/webCrawler
