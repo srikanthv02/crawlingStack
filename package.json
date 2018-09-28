@@ -11,6 +11,6 @@
 		"request": "2.88.0",
 		"url-parse": "1.4.3",
 		"cheerio": "1.0.0-rc.2",
-		"fs":"2.2.2"
+		"file-system":"2.2.2"
 	}			
 }

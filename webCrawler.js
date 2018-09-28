@@ -1,7 +1,7 @@
 var request = require('request'); //used for HTTP requests. These modules are added in the package.json
 var URL = require('url-parse'); //used for parsing URL
 var cheerio = require('cheerio'); //for HTML elements. No need of building HTML parsing. Cheerio implements a subset of core jQuery
-var fs = require('fs'); //for writing to a file. fs = file system
+var fs = require('file-system'); //for writing to a file. fs = file system
 
 var baseURL = "http://wiprodigital.com";
 
@@ -51,7 +51,11 @@ function collectInternalLinks($) {
   var parsedLinks = $("a[href*='"+ parsedURL.hostname +"']");
   
   parsedLinks.each(function() {	
-  	  domainLinks.push($(this).attr('style'));
+      if($(this).attr('style') !=undefined){
+          var stringExtract = $(this).attr('style').substring($(this).attr('style').indexOf("(") + 1);
+          stringExtract = stringExtract.substring(0, stringExtract.indexOf(")"));
+          domainLinks.push(stringExtract);
+      }
       domainLinks.push($(this).attr('href'));
   });
   console.log("Found " + domainLinks.length + " domainLinks ");
