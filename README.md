@@ -12,7 +12,8 @@ Building a simple web crawler usig NodeJS
 - .gitignore file is available.
 
 ### Steps to Build - Using Script ###
-- There is a shell script file called as build.sh, which installs node and npm for MAC machines, along with Git Clone and npm install on the path. Only pre-requisite is HomeBrew. Run the file as 'sh build.sh'
+- There is a shell script file called as build.sh, which installs node and npm for MAC machines, along with Git Clone and npm install on the path. Only pre-requisite is HomeBrew. Run the file as 'sh build.sh'. 
+- If node is already installed, it will skip the step and move ahead.
 
 ### Steps to Build - Manual ###
 - Install node and npm on MAC using brew install node. (In case HomeBrew is working)
