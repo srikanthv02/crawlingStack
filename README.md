@@ -1,4 +1,4 @@
-# webCrawler
+# Web Crawler
 Building a simple web crawler usig NodeJS
 
 
@@ -12,10 +12,14 @@ Building a simple web crawler usig NodeJS
 - .gitignore file is available.
 
 ### Steps to Build - Using Script ###
-- There is a shell script file called as build.sh, which installs node and npm for MAC machines, along with Git Clone and npm install on the path. 
+- There is a shell script file called as build.sh, which installs node and npm for MAC machines, along with Git Clone and npm install on the path. Only pre-requisite is HomeBrew. Run the file as 'sh build.sh'
 
 ### Steps to Build - Manual ###
 - Install node and npm on MAC using brew install node. (In case HomeBrew is working)
+- In case of Ubuntu machines please install node and npm via 
+  - sudo apt-get update
+  - sudo apt-get install nodejs
+  - sudo apt-get install npm
 - git clone  https://github.com/srikanthv02/webCrawler
 - cd /webCrawler
 - run 'sudo npm install'
